@@ -1,0 +1,1 @@
+{"version":3,"names":["React","createContext","undefined"],"sources":["DrawerStatusContext.tsx"],"sourcesContent":["import type { DrawerStatus } from '@react-navigation/native';\nimport * as React from 'react';\n\nexport default React.createContext<DrawerStatus | undefined>(undefined);\n"],"mappings":";;;;;;;AACA;;;;;;4BAEeA,KAAK,CAACC,aAAN,CAA8CC,SAA9C,C"}

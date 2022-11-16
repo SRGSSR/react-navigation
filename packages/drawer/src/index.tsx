@@ -12,6 +12,7 @@ export { default as DrawerItem } from './views/DrawerItem';
 export { default as DrawerItemList } from './views/DrawerItemList';
 export { default as DrawerToggleButton } from './views/DrawerToggleButton';
 export { default as DrawerView } from './views/DrawerView';
+export { MaybeScreen, MaybeScreenContainer } from './views/ScreenFallback';
 
 /**
  * Utilities

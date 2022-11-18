@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid/non-secure';
+import { Platform } from 'react-native';
 
 import TabRouter, {
   TabActionHelpers,
@@ -230,12 +231,19 @@ export default function DrawerRouter({
           return result;
         }
 
-        case 'GO_BACK':
+        case 'GO_BACK': {
+          // On TV, if the drawer is open and the navigator receives a GO_BACK action it shouldn't close the drawer again
+          if (Platform.isTV) {
+            const nextState = isDrawerInHistory(state)
+              ? removeDrawerFromHistory(state)
+              : state;
+            return router.getStateForAction(nextState, action, options);
+          }
           if (isDrawerInHistory(state)) {
             return removeDrawerFromHistory(state);
           }
-
           return router.getStateForAction(state, action, options);
+        }
 
         default:
           return router.getStateForAction(state, action, options);

@@ -6266,8 +6266,13 @@ __metadata:
   dependencies:
     del-cli: ^3.0.1
     nanoid: ^3.1.23
+    react: 18.0.0
+    react-native: 0.69.5
     react-native-builder-bob: ^0.18.1
     typescript: ^4.7.4
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
